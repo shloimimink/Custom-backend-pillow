@@ -91,7 +91,7 @@ exports.deletePillow = async(req, res, next) => {
     await Pillow.deleteOne({
       _id: req.params.id 
     });
-    res.status(200).json('pillow deleted');
+    res.status(200).json(pillow._id);
   } catch (err) {
     console.error(err.message);
     res.status(500).json(err);
